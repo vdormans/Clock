@@ -80,6 +80,7 @@
             
             hours = hours % 12;
             hours = hours ? hours : 12; // Si la hora es 0, convertirla a 12
+            hours = hours < 10 ? '0' + hours : hours; // Añadir 0 si es un solo dígito
             minutes = minutes < 10 ? '0' + minutes : minutes;
             
             document.getElementById('hours').textContent = hours;
